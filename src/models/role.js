@@ -26,6 +26,17 @@ const getRolesByOperaId = async function (operaId) {
   return roles
 }
 
+// const getOperaRoleByOperaIdAndRoleName = async function (operaId, roleName) {
+//   const roles = await Role.findAll({
+//     where: {
+//       operaId: {
+//         [Op.like]: `%${operaId}%`
+//       }
+//     }
+//   })
+//   return ro
+// }
+
 module.exports = {
   getAllRoles,
   getRolesByOperaId

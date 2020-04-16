@@ -60,10 +60,19 @@ const getOperaIdByName = async function (operaName) {
   return operas
 }
 
+const getOperaNameById = async function (operaId) {
+  const operas = await Opera.findAll({
+    attributes: ['operaName', 'operaId'],
+    where: { operaId }
+  })
+  return operas
+}
+
 module.exports = {
   getOperaList,
   getAllOperas,
   getOperaByType,
   getOperaIdByType,
-  getOperaIdByName
+  getOperaIdByName,
+  getOperaNameById
 }
